@@ -95,3 +95,30 @@ describe("Elements verifications in authentication pages", () => {
     cy.get("a").contains("Create a free business account").should("be.visible");
   });
 });
+
+describe("Elements in home page", () => {
+  beforeEach(() => {
+    cy.visit("https://www.amazon.com")
+  })
+  it.only("Verify location selection is working", () => {
+    cy.get('#nav-global-location-popover-link').click({force:true})
+    cy.get("#a-popover-1")
+      .contains("Choose your location")
+      .should('be.visible')
+    cy.get("#a-popover-1")
+      .contains("Choose your location")
+      .as('location-modal')
+    // cy.get('[data-action="a-dropdown-button"]')
+    cy.get("#GLUXCountryListDropdown")
+      .click()
+    cy.get(".a-popover-wrapper").should('be.visible')
+    cy.get('a').contains('Japan').click()
+    cy.get("#GLUXCountryValue").should('contain', 'Japan')
+    cy.get('.a-popover-footer').within(() => {
+      cy.get('button').contains('Done').click()  
+    })
+    cy.get('#nav-global-location-popover-link')
+      .should('contain', 'Deliver to')
+      .should('contain', 'Japan')
+  })
+})
