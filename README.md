@@ -9,9 +9,9 @@
 4. Or you can use the cli to run the cypress test
 	> npx cypress run
 
-## Test Scope
+## [1. Test Scope Redirection Links](https://github.com/amir-ubay-qa/cypress/blob/main/cypress/e2e/amazon/01-redirection-links.cy.js)
 
-### Redirection to and from home page
+### A. Redirection to and from home page
 
 1. Verify amazon logo redirection
 2. Verify Return & Orders redirect to signin page (sign-out)
@@ -22,7 +22,7 @@
 7. Verify Gift Cards menu redirect to correct menu
 8. Verify sell menu redirect to correct page
 
-### Redirection to and from sign in page
+### B.  Redirection to and from sign in page
 
 1. user can navigate to sign in page
 2. user can navigate to link Conditions of Use
@@ -32,3 +32,12 @@
 6. user can navigate to Amazon account creation page
 7. user can navigate to link Conditions of Use in footer
 8. user can navigate to link Privacy Notice in footer
+
+## [2. Test Scope Elements' Page Verification](https://github.com/amir-ubay-qa/cypress/blob/main/cypress/e2e/amazon/02-page-elements.cy.js)
+
+### Authentication Page Elements Verifiation
+
+1. verify sign-in input email page elements
+2. verify sign-in input password page elements
+3. verify create-account page elements
+4. Verify location selection is working
