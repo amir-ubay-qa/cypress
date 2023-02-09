@@ -1,4 +1,4 @@
-# Automation for Amazon E-Commerce with Cypress
+# Automation with Cypress
 
 ## How to run
 1. Clone the repository
@@ -8,6 +8,8 @@
 	> npx cypress open
 4. Or you can use the cli to run the cypress test
 	> npx cypress run
+
+# AMAZON E-commerce (E2E Testing)
 
 ## [1. Test Scope Redirection Links](https://github.com/amir-ubay-qa/cypress/blob/main/cypress/e2e/amazon/01-redirection-links.cy.js)
 
@@ -41,3 +43,16 @@
 2. verify sign-in input password page elements
 3. verify create-account page elements
 4. Verify location selection is working
+
+# Reqress Mockup API (XHR Testing)
+
+## [1. Test Scope User Endpoints](https://github.com/amir-ubay-qa/cypress/blob/main/cypress/e2e/reqres/01-user-endpoint.cy.js)
+
+1. Verify GET user list respond properties
+2. Verify values of get user page 1 properties
+3. Verify values of get user page 2 properties
+4. Verify data of user with id 2
+5. Verify response for user not found
+6. Verify respond after post a new user
+7. Verify respond after update a user
+8. Verify respond after delete a user
